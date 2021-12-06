@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'cert',component: CertComponent, canActivate : [AuthGuard] },
   { path: 'qrgen',component: QrgenComponent, canActivate : [AuthGuard] },
   { path: 'qrlogin',component: QrloginComponent },
-  { path: 'profile-edit',component: ProfileEditComponent, canActivate : [AuthGuard] },
+  { path: 'profile-edit',component: ProfileComponent, canActivate : [AuthGuard] },
   { path: 'map',component: MapComponent, canActivate : [AuthGuard] },
 
   
