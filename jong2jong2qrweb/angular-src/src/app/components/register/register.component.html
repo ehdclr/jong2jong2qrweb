@@ -1,0 +1,114 @@
+<!-- <br>
+<h2 class= "page-header">사용자 등록 | Register</h2>
+<form (ngSubmit)="onRegisterSubmit()">
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">이름 | Name</label>
+        <input type="text" [(ngModel)]="name"  [ngModelOptions]="{standalone:true}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail2" class="form-label">이메일주소 | email</label>
+        <input type="email" [(ngModel)]="email"  [ngModelOptions]="{standalone:true}" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
+        
+      </div>
+
+
+      <div class="mb-3">
+        <label for="exampleInputEmail3" class="form-label">아이디 | Username</label>
+        <input type="text" [(ngModel)]="username"  [ngModelOptions]="{standalone:true}" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp">
+        
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail4" class="form-label">패스워드 | Password</label>
+        <input type="password" [(ngModel)]="password1"  [ngModelOptions]="{standalone:true}" class="form-control" id="exampleInputEmail4" aria-describedby="emailHelp">
+        
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail5" class="form-label">패스워드 확인 | Password</label>
+        <input type="password" [(ngModel)]="password2"  [ngModelOptions]="{standalone:true}" class="form-control" id="exampleInputEmail5" aria-describedby="emailHelp">
+        
+      </div>
+      
+      <input type="submit" class="btn btn-primary" value="사용자등록">
+</form> -->
+
+
+
+
+<section class="page-section" id="contact">
+  <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-lg-8 col-xl-6 text-center">
+              <br>
+              <br>
+
+              <br>
+              <br>
+              <hr class="divider" />
+              <h2 class="text-muted mb-5">사용자 등록 | Register</h2>
+          </div>
+      </div>
+      <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+          <div class="col-lg-6">
+              
+              <form id="contactForm" data-sb-form-api-token="API_TOKEN" (ngSubmit)="onRegisterSubmit()">
+                  <!-- 이름 -->
+                  <div class="form-floating mb-3">
+                      <input class="form-control"  type="text" id="name" placeholder="Enter your Name"
+                      [(ngModel)]="name"  [ngModelOptions]="{standalone:true}"  />
+                      <label for="name">이름</label>
+                     <div class="invalid-feedback" data-sb-feedback="orgUnit:required">A name is required.</div>
+                      
+                  </div>
+
+                  <!-- 아이디 -->
+                  <div class="form-floating mb-3">
+                    <input class="form-control"  type="text"  placeholder="Enter your ID"
+                    [(ngModel)]="username"  [ngModelOptions]="{standalone:true}" name="organization"/>
+                    <label for="organization">ID</label>
+                    <div class="invalid-feedback" data-sb-feedback="organization:required">ID is required.</div>
+                    
+                </div>
+                 
+                  <!-- 이메일주소 -->
+                  <div class="form-floating mb-3">
+                    <input class="form-control"  type="email" placeholder="Enter your email" data-sb-validations="required" 
+                    [(ngModel)]="email"  [ngModelOptions]="{standalone:true}" id="email"/>
+                    <label for="email">이메일주소</label>
+                    <div class="invalid-feedback" data-sb-feedback="orgUnit:required">email is required.</div>
+                </div>
+                  <!-- 패스워드 -->
+                  <div class="form-floating mb-3">
+                      <input class="form-control"  type="password"  data-sb-validations="required" placeholder="Enter your Password"
+                      [(ngModel)]="password1"  [ngModelOptions]="{standalone:true}" name="locality" id="Password"/>
+                      <label for="locality">패스워드</label>
+                      <div class="invalid-feedback" data-sb-feedback="locality:required">password is required.</div>
+                      
+                  </div>
+                  <!-- 패스워드확인 -->
+                  <div class="form-floating mb-3">
+                    <input class="form-control"  type="password"  data-sb-validations="required" placeholder="Enter your Password"
+                    [(ngModel)]="password2"  [ngModelOptions]="{standalone:true}" name="state" id="Password2"/>
+                    <label for="password2">패스워드확인</label>
+                    <div class="invalid-feedback" data-sb-feedback="state:required">Password is required.</div>
+                </div>
+                  
+
+                  
+                                   
+                
+                  <div class="d-grid"><button class="btn btn-secondary btn-xl " id="submitButton" type="submit">Submit</button></div>
+              </form>
+          </div>
+      </div>
+      
+  </div>
+</section>
+<!-- Footer-->
+<footer class="bg-light py-5">
+  <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - Company Name</div></div>
+</footer>

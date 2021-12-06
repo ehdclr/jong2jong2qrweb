@@ -1,0 +1,74 @@
+<!-- <br>
+<div *ngIf="name">
+<h2 class="page-header">Name: {{name}}</h2>
+<br>
+<div class="alert alert-info">
+<p>
+    Username: {{username}} <br>
+    Email: {{email}}
+</p>
+</div>
+<a class="btn btn-secondary" routerLink="/profile-edit">내 정보 수정</a>
+</div> -->
+
+<section class="page-section" id="contact" *ngIf="name">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6 text-center">
+                <br>
+                <br>
+  
+                <br>
+                <br>
+                <hr class="divider" />
+                <p class="text-muted mb-5">프로필 수정 </p>
+            </div>
+        </div>
+        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+            <div class="col-lg-6">
+                
+                
+                    <!-- userName input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="name" type="text" placeholder="Enter your name..." id="name"
+                         data-sb-validations="required" disabled/>
+                        <label for="name">Name: {{name}}</label>
+                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                    </div>
+  
+                    <!-- username -->
+                    <div class="form-floating mb-3">
+                      <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" id="username" disabled
+                      />
+                      <label for="username">Username: {{username}}</label>
+                      <div class="invalid-feedback" data-sb-feedback="username:required">A name is required.</div>
+                  </div>
+                    
+                  <!-- email -->
+                  <div class="form-floating mb-3">
+                    <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" disabled
+                   />
+                    <label for="email">Email: {{email}}</label>
+                    <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                </div>
+                    
+                    
+                    
+  
+                    
+                    
+                                     
+                  
+                <a class="btn btn-secondary" routerLink="/profile-edit">내 정보 수정</a>
+                <br>
+                <br>
+                <hr>
+            </div>
+        </div>
+        
+    </div>
+  </section>
+  <!-- Footer-->
+  <footer class="bg-light py-5">
+    <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - Company Name</div></div>
+  </footer>

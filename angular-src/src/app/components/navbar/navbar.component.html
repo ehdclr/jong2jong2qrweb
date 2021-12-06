@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink= "/">LeeHyeonJongZzang</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 col-md-10">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" routerLink= "/"><i class="bi bi-house-door-fill"></i>  홈</a>
+        </li>
+        
+        <li *ngIf="checkLoggedIn()" class="nav-item">
+          <a class="nav-link" routerLink= "/profile"><i class="bi bi-person-circle"></i>  프로필</a>
+        </li>
+              
+        <li  *ngIf="checkLoggedIn()" class="nav-item">
+          <a class="nav-link" routerLink= "/dashboard"><i class="bi bi-view-list"></i>  대시보드</a>
+        </li>
+        <li  *ngIf="checkLoggedIn()" class="nav-item">
+          <a class="nav-link" routerLink= "/list"><i class="bi bi-person-lines-fill"></i>  사용자 리스트</a>
+        </li>
+        <li  *ngIf="checkLoggedIn()" class="nav-item">
+          <a class="nav-link" routerLink= "/cert"><i class="bi bi-credit-card"></i>  인증서 발급</a>
+        </li>
+        <li *ngIf="checkLoggedIn()" class="nav-item">
+        <a class="nav-link" routerLink="/qrgen">
+        <i class="bi bi-qr-code"></i> 로그인용QR생성</a>
+        </li>
+
+        <li *ngIf="checkLoggedIn()" class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="/map">
+          <i class="bi bi-qr-code"></i> 지도</a>
+          </li>
+        </ul>
+         <ul class="navbar-nav me-auto mb-2 mb-lg-0 col-md-2">
+        <li *ngIf="!checkLoggedIn()" class="nav-item" >
+          <a class="nav-link" routerLink= "/login" ><i class="bi bi-box-arrow-in-right"></i>  Sign up</a>
+        </li>
+        
+        <li *ngIf="checkLoggedIn()" class="nav-item"> 
+          <a class="nav-link" (click) ="onLogOutClick()"><i class="bi bi-box-arrow-right"></i>  Log Out</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+

@@ -1,0 +1,47 @@
+<!-- <br/>
+<h2 class="page-header">로그인용전자서명QR 생성-{{ username }}</h2>
+<br/>
+<div class="mb-3">
+<label for="exampleFormControlInput2" class="form-label">로그인요청| Login Request</label>
+<textarea class="form-control" id="exampleFormControlInput2" rows="4" disabled> {{ value}} </textarea>
+</div>
+<div *ngIf="value" class="qrcode" style="text-align: center;">
+<ngx-qrcode [value]="value" [width]="500"></ngx-qrcode>
+
+<button type="button" class="btn btn-secondary" (click)="QRRegen()">QR 코드 재발급 받기</button>
+</div> -->
+
+<section class="page-section" id="contact">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center " >
+            <div class="col-lg-8 col-xl-6 text-center">
+                
+                
+                <hr class="divider" />
+                <h2 class="text-muted mb-5">로그인용전자서명QR 생성-{{ username }} </h2>
+            </div>
+        </div>
+        <div class="row gx-4 gx-lg-5 justify-content-center mb-5" style="border:1px solid gray;">
+            <div class="col-lg-6">
+                
+                <br/>
+            
+            <br/>
+<div class="mb-3" >
+<label for="exampleFormControlInput2" class="form-label">로그인요청| Login Request</label>
+<textarea class="form-control" id="exampleFormControlInput2" rows="4" disabled> {{ value}} </textarea>
+</div>
+<div *ngIf="value" class="qrcode" style="text-align: center;">
+<ngx-qrcode [value]="value" [width]="500"></ngx-qrcode>
+
+<button type="button" class="btn btn-secondary" (click)="QRRegen()">QR 코드 재발급 받기</button>
+</div>
+            </div>
+        </div>
+        
+    </div>
+  </section>
+  <!-- Footer-->
+  <footer class="bg-light py-5">
+    <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 -  LeeHyeonJong</div></div>
+  </footer>

@@ -1,0 +1,108 @@
+
+<!-- <h2 class="page header"> 내 정보 수정 | Profile Edit</h2>
+<br />
+<form (ngSubmit)="onEditSubmit()">
+
+  <div class="form-group">
+    <label for="exampleInputEmail3">아이디 | Username</label>
+    <input type="text" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" class="form-control" disabled />
+  </div>
+  <br />
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">사용자 이름 | Name</label>
+    <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control" />
+  </div>
+  <br />
+
+  <div class="form-group">
+    <label for="exampleInputEmail2">이메일 | Email address</label>
+    <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="form-control" />
+  </div>
+  <br />
+
+  <div class="form-group">
+    <label for="exampleInputEmail4">패스워드 | Password</label>
+    <input type="password" [(ngModel)]="password1" [ngModelOptions]="{standalone: true}" class="form-control" />
+  </div>
+  <br />
+
+  <div class="form-group">
+    <label for="exampleInputEmail5">패스워드 확인 | Password</label>
+    <input type="password" [(ngModel)]="password2" [ngModelOptions]="{standalone: true}" class="form-control" />
+  </div>
+  <br />
+
+  <input type="submit" class="btn btn-primary" value="사용자 수정" />
+
+</form> -->
+
+
+<section class="page-section" id="contact">
+  <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-lg-8 col-xl-6 text-center">
+              <br>
+              <br>
+
+              <br>
+              <br>
+              <hr class="divider" />
+              <p class="text-muted mb-5">프로필 수정 </p>
+          </div>
+      </div>
+      <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+          <div class="col-lg-6">
+              
+              <form id="contactForm" data-sb-form-api-token="API_TOKEN" (ngSubmit)="onEditSubmit()">
+                  <!-- userName input-->
+                  <div class="form-floating mb-3">
+                      <input class="form-control" id="name" type="text" placeholder="Enter your name..."
+                      [(ngModel)]="name" [ngModelOptions]="{standalone: true}" data-sb-validations="required" disabled/>
+                      <label for="name">이름</label>
+                      <div class="invalid-feedback" data-sb-feedback="name:required">A Username is required.</div>
+                  </div>
+
+                  <!-- name -->
+                  <div class="form-floating mb-3">
+                    <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" 
+                    [(ngModel)]="username" [ngModelOptions]="{standalone: true}"/>
+                    <label for="name">ID</label>
+                    <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                </div>
+                  <!-- Email address input-->
+                  <div class="form-floating mb-3">
+                      <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" 
+                      [(ngModel)]="email" [ngModelOptions]="{standalone: true}"/>
+                      <label for="email">Email address</label>
+                      <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                      <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                  </div>
+                  
+                  <div class="form-floating mb-3">
+                      <input class="form-control" id="password" type="password"  data-sb-validations="required" 
+                      [(ngModel)]="password1" [ngModelOptions]="{standalone: true}"/>
+                      <label for="Password">PassWord</label>
+                      <div class="invalid-feedback" data-sb-feedback="phone:required">A Password is required.</div>
+                  </div>
+
+                  <div class="form-floating mb-3">
+                    <input class="form-control" id="password" type="password"  data-sb-validations="required" 
+                    [(ngModel)]="password2" [ngModelOptions]="{standalone: true}"/>
+                    <label for="Password">Verify Password</label>
+                    <div class="invalid-feedback" data-sb-feedback="phone:required">A Password is required.</div>
+                </div>
+                  
+                                   
+                
+                  <div class="d-grid"><button class="btn btn-secondary btn-xl " id="submitButton" type="submit">Submit</button></div>
+              </form>
+          </div>
+      </div>
+      
+  </div>
+</section>
+<!-- Footer-->
+<footer class="bg-light py-5">
+  <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - Company Name</div></div>
+</footer>

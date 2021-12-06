@@ -1,0 +1,30 @@
+<br>
+<div *ngIf= "name">
+    <h2 class= "page-header">사용자 이름: {{ name }}</h2>
+    <form >
+        <div class="form-group">
+            <label for="userinfo">UserInfo</label>
+            <textarea class="form-control" id ="userinfo" rows="1" disabled> {{ userString }} </textarea>
+        </div>
+        <div class="form-group">
+            <label for="token">Token</label>
+            <textarea class="form-control" id ="token" rows="4" disabled> {{ token }} </textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="token">PrivateKey</label>
+            <textarea class="form-control" id ="token" rows="4" disabled> {{ privateKey }} </textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="token">Certificate</label>
+            <textarea class="form-control" id ="token" rows="4" disabled> {{ cert }} </textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="token">CA Certificate</label>
+            <textarea class="form-control" id ="token" rows="4" disabled> {{ caCert }} </textarea>
+        </div>
+    </form>
+
+</div>

@@ -1,0 +1,151 @@
+<!-- <br/>
+<h2 class="page-header">인증서발급(Certificate Request) -{{ common }}</h2>
+<form (ngSubmit)="onCertRequest()">
+<div class="mb-3">
+<label class="form-label">이름(Common Name) -현 사용자의 ID를 자동으로 이용하며 사용자가 바꿀 수 없습니다.</label>
+<input type="text"[(ngModel)]="common"name="common"class="form-control"disabled/>
+</div>
+
+<div class="mb-3">
+<label class="form-label"> 부서(Organizational Unit Name) </label>
+<input type="text"[(ngModel)]="orgUnit"name="orgUnit"class="form-control"/>
+</div>
+
+<div class="mb-3">
+<label class="form-label"> 기관(Organization Name) </label>
+<input 
+type="text" 
+[(ngModel)] = "organization" 
+name="organization" class="form-control"
+/>
+</div>
+
+<div class="mb-3">
+<label class="form-label"> 도시(Locality Name) </label>
+<input type="text"[(ngModel)]="locality"name="locality"class="form-control"/>
+</div>
+
+<div class="mb-3">
+<label class="form-label"> 시도명(State or Province Name) </label>
+<input type="text" [(ngModel)]="state" name="state" class="form-control" />
+</div>
+
+<div class="mb-3">
+<label class="form-label"> 국가(Country) -KR for Korea </label>
+<input type="text"[(ngModel)]="country"name="country"class="form-control"/>
+</div>
+
+
+<div class="form-check form-check-inline">
+<input class="form-check-input"type="radio"name="keySize"[(ngModel)]="keySize"id="exampleRadios1"value="512"/>
+<label class="form-check-label" for="exampleRadios1"> 512 bits </label>
+</div>
+
+<div class="form-check form-check-inline">
+<input class="form-check-input"type="radio"name="keySize"[(ngModel)]="keySize"id="exampleRadios2"value="1024"checked/>
+<label class="form-check-label" for="exampleRadios2"> 1024 bits </label>
+</div>
+
+<div class="form-check form-check-inline">
+<input class="form-check-input"type="radio"name="keySize"[(ngModel)]="keySize"id="exampleRadios3"value="2048"/>
+<label class="form-check-label" for="exampleRadios3"> 2048 bits </label>
+</div>
+<br/>
+<br/>
+<input type="submit" class="btn btn-primary" value="인증서발급요청하기"/>
+
+</form> -->
+
+
+
+
+<section class="page-section" id="contact">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6 text-center">
+                <br>
+                <br>
+  
+                <br>
+                <br>
+                <hr class="divider" />
+                <h2 class="text-muted mb-5">인증서발급(Certificate Request) -{{ common }}</h2>
+            </div>
+        </div>
+        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+            <div class="col-lg-6">
+                
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN" (ngSubmit)="onCertRequest()">
+                    <!-- 이름 -->
+                    <div class="form-floating mb-3">
+                        <input class="form-control"  type="text" 
+                        [(ngModel)]="common"name="common" disabled />
+                        <label  class="form-label" form="common">이름(Common Name)</label>
+                        
+                    </div>
+  
+                    <!-- 부서 -->
+                    <div class="form-floating mb-3">
+                      <input class="form-control"  type="text" placeholder="Enter your organization" data-sb-validations="required" 
+                      [(ngModel)]="orgUnit"name="orgUnit"/>
+                      <label for="orgUnit">부서(Organizational Unit Name)</label>
+                      <div class="invalid-feedback" data-sb-feedback="orgUnit:required">A name is required.</div>
+                  </div>
+                   <!-- 기관 -->
+                    <div class="form-floating mb-3">
+                        <input class="form-control"  type="text"  placeholder="Enter your organization"
+                        [(ngModel)] = "organization" name="organization"/>
+                        <label for="organization">기관(Organization Name)</label>
+                        <div class="invalid-feedback" data-sb-feedback="organization:required">A name is required.</div>
+                        
+                    </div>
+                    <!-- 도시 -->
+                    <div class="form-floating mb-3">
+                        <input class="form-control"  type="text"  data-sb-validations="required" placeholder="Enter your locality"
+                        [(ngModel)]="locality"name="locality"/>
+                        <label for="locality">도시(Locality Name)</label>
+                        <div class="invalid-feedback" data-sb-feedback="locality:required">A name is required.</div>
+                        
+                    </div>
+                    <!-- 시도명 -->
+                    <div class="form-floating mb-3">
+                      <input class="form-control"  type="text"  data-sb-validations="required" placeholder="Enter your state"
+                      [(ngModel)]="state" name="state"/>
+                      <label for="state">시도명(State or Province Name)</label>
+                      <div class="invalid-feedback" data-sb-feedback="state:required">A state is required.</div>
+                  </div>
+                    <!-- 국가 -->
+                    <div class="form-floating mb-3">
+                        <input class="form-control"  type="text"  data-sb-validations="required" placeholder="Enter your country"
+                        [(ngModel)]="country"name="country"/>
+                        <label for="country">국가(Country) -KR for Korea</label>
+                        <div class="invalid-feedback" data-sb-feedback="country:required">country is required.</div>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input"type="radio"name="keySize"[(ngModel)]="keySize"id="exampleRadios1"value="512"/>
+                        <label class="form-check-label" for="exampleRadios1"> 512 bits </label>
+                        </div>
+                        
+                        <div class="form-check form-check-inline">
+                        <input class="form-check-input"type="radio"name="keySize"[(ngModel)]="keySize"id="exampleRadios2"value="1024"checked/>
+                        <label class="form-check-label" for="exampleRadios2"> 1024 bits </label>
+                        </div>
+                        
+                        <div class="form-check form-check-inline">
+                        <input class="form-check-input"type="radio"name="keySize"[(ngModel)]="keySize"id="exampleRadios3"value="2048"/>
+                        <label class="form-check-label" for="exampleRadios3"> 2048 bits </label>
+                        </div>
+                                     
+                  
+                    <div class="d-grid"><button class="btn btn-secondary btn-xl " id="submitButton" type="submit">Submit</button></div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+  </section>
+  <!-- Footer-->
+  <footer class="bg-light py-5">
+    <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - Company Name</div></div>
+  </footer>
